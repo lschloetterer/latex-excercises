@@ -1,0 +1,27 @@
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[margin=2cm,left=3cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[singlespacing]{scrlayer-scrpage}
+\usepackage{mathpazo} % Palatino
+\usepackage[skins]{tcolorbox}
+\usepackage[pdfusetitle]{hyperref}
+
+\KOMAoptions{parskip=half}
+
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{\@title}
+\ohead{\@subtitle}
+\ifoot{\@author}
+\ofoot{\@date}
+
+\newtcolorbox[auto counter]{question}[1][]{
+    fonttitle=\bfseries,
+    fontupper=\bfseries,
+    colbacktitle=white!50!gray,
+    coltitle=black,
+    enhanced,
+    attach boxed title to top left={xshift=0.5cm,yshift=-2mm},
+    title={\thetcbcounter}
+}
